@@ -9,8 +9,8 @@ function E = WeakClassifierError(C, D, Y)
 % This is for your own benefit, since a loop will be too slow to use
 % with a reasonable amount of Haar features and training images.
 
-missclassified = (C~=Y)
+missclassified = (C~=Y);
 
-E = sum(D.*missclassified)
+E = sum(D.*missclassified);
 end
 

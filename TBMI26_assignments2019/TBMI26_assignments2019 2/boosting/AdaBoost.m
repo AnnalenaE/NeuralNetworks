@@ -3,12 +3,12 @@
 %  when your algorithm is working.
 
 % Number of randomized Haar-features
-nbrHaarFeatures = 25;
+nbrHaarFeatures = 100;
 % Number of training images, will be evenly split between faces and
 % non-faces. (Should be even.)
-nbrTrainImages = 50;
+nbrTrainImages = 100;
 % Number of weak classifiers
-nbrWeakClassifiers = 10;
+nbrWeakClassifiers = 90;
 
 %% Load face and non-face data and plot a few examples
 %  Note that the data sets are shuffled each time you run the script.
@@ -122,7 +122,7 @@ for clsfr = 1:nbrWeakClassifiers % for all weak classifers
 end
 
 
-[C,cM,acc] = strongClassify(nbrWeakClassifiers,alpha, opt_p,opt_f,opt_t,xTrain,yTrain)
+[C,cM,acc] = strongClassify(nbrWeakClassifiers,alpha, opt_p,opt_f,opt_t,xTrain,yTrain);
 
 %% Evaluate your strong classifier here
 %  You can evaluate on the training data if you want, but you CANNOT use
